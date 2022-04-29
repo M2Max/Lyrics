@@ -1,7 +1,11 @@
+<?php
+
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Login 04</title>
+    <title>Lyrics</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -28,17 +32,23 @@
                     <div class="login-wrap p-4 p-md-5">
                         <div class="d-flex">
                             <div class="w-100">
-                                <h3 class="mb-4">Sign In</h3>
+                                <h3 class="mb-4" id="message">Sign In</h3>
                             </div>
                         </div>
                         <div class="signin-form" >
                             <div class="form-group mb-3">
-                                <label class="label" for="name">Username</label>
-                                <input type="text" class="form-control" placeholder="Username" name="username" required>
+                                <label class="label" for="txt_uname">Username</label>
+                                <input type="text" class="form-control" placeholder="Username" name="username" id="txt_uname" required>
+                                <div class="invalid-feedback">
+                                    Please insert a valid username.
+                                </div>
                             </div>
                             <div class="form-group mb-3">
-                                <label class="label" for="password">Password</label>
-                                <input type="password" class="form-control" placeholder="Password" name="password" required>
+                                <label class="label" for="txt_pwd">Password</label>
+                                <input type="password" class="form-control" placeholder="Password" name="password" id="txt_pwd" required>
+                                <div class="invalid-feedback">
+                                    Please insert a valid password.
+                                </div>
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="form-control btn btn-primary rounded submit px-3" id="loginSubmit">Sign In</button>
@@ -52,10 +62,9 @@
     </div>
 </section>
 
-<script src="../js/jquery.min.js" type="module"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="../js/popper.js"></script>
 <script src="../js/bootstrap.min.js"></script>
-<script src="../js/main.js"></script>
 <script src="../js/login.js" type="module"></script>
 
 </body>
