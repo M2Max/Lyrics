@@ -2,6 +2,8 @@
 
 include "Connection.php";
 
+session_start();
+
 $username = $_POST["username"];
 $password = $_POST["password"];
 
@@ -16,6 +18,7 @@ if ($username != "" && $password != "") {
     $count = $row['cntUser'];
 
     if ($count > 0) {
+        $_SESSION['username'] = $username;
         echo 1;
     } else {
         echo 0;
