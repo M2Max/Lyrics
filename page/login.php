@@ -12,7 +12,6 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <link rel="stylesheet" href="../css/login.css">
 
 </head>
@@ -29,32 +28,7 @@
                 <div class="wrap d-md-flex">
                     <div class="img" style="background-image: url(../resources/images/bg-1.jpg);">
                     </div>
-                    <div class="login-wrap p-4 p-md-5">
-                        <div class="d-flex">
-                            <div class="w-100">
-                                <h3 class="mb-4" id="message">Sign In</h3>
-                            </div>
-                        </div>
-                        <div class="signin-form" >
-                            <div class="form-group mb-3">
-                                <label class="label" for="txt_uname">Username</label>
-                                <input type="text" class="form-control" placeholder="Username" name="username" id="txt_uname" required>
-                                <div class="invalid-feedback">
-                                    Please insert a valid username.
-                                </div>
-                            </div>
-                            <div class="form-group mb-3">
-                                <label class="label" for="txt_pwd">Password</label>
-                                <input type="password" class="form-control" placeholder="Password" name="password" id="txt_pwd" required>
-                                <div class="invalid-feedback">
-                                    Please insert a valid password.
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="form-control btn btn-primary rounded submit px-3" id="loginSubmit">Sign In</button>
-                            </div>
-                        </div>
-                        <p class="text-center">Not a member? <a data-toggle="tab" href="#signup">Sign Up</a></p>
+                    <div class="login-wrap p-4 p-md-5" id="content">
                     </div>
                 </div>
             </div>

@@ -2,6 +2,7 @@
 @import '../../../../Users/Maximiliano Mamone/Downloads/login-form-14/scss/bootstrap/variables';
 @import '../../../../Users/Maximiliano Mamone/Downloads/login-form-14/scss/bootstrap/mixins';
 
+
 $font-primary: 'Lato',Arial, sans-serif;
 $primary: #e3b04b;
 $secondary: #2b2b28;
@@ -48,6 +49,7 @@ h1, h2, h3, h4, h5,
 }
 //HEADING SECTION
 .heading-section{
+	font-family: 'Water Brush', cursive;
 	font-size: 28px;
 	color: $black;
 }
