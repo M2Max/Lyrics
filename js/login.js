@@ -2,12 +2,11 @@ $(function(){
     let content = $("#content");
     content.load("../page/loginForm.php");
 
-    $("#loginSubmit").on("click",function(){
+    content.on("click", "#loginSubmit",function(){
         let username = $("#txt_uname").val().trim();
         let password = $("#txt_pwd").val().trim();
 
         if( username != "" && password != "" ){
-            console.log("ti stai loggando");
             $.ajax({
                 url:'../php/auth.php',
                 type:'post',
@@ -15,7 +14,7 @@ $(function(){
                 success:function(response){
                     console.log(response);
                     if(response == 1){
-                        window.location = "../index.php";
+                        window.location = "../page/home.php";
                     }else{
                         $('#txt_uname').addClass("is-invalid");
                         $('#txt_pwd').addClass("is-invalid");
@@ -48,15 +47,17 @@ $(function(){
                 setInvalidMessage('#txt_signup_pwd_2', 'Passwords are different');
             } else {
                 $.ajax({
-                    url: '../php/signup.php',
+                    url: '../php/registration.php',
                     type: 'post',
                     data: {username: username, password: password},
                     success: function (response) {
                         console.log(response);
                         if (response == 1) {
-                            window.location = "../index.php";
-                        } else {
+                            window.location = "../page/home.php";
+                        } else if (response == -1) {
                             setInvalidMessage('#txt_signup_uname', 'Username already exists');
+                        }else {
+                            setInvalidMessage('#txt_signup_uname', 'User creation error try again later');
                         }
                     }
                 });
