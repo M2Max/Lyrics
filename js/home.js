@@ -1,0 +1,1 @@
+$("#content").load("../page/welcome.php");
