@@ -1,4 +1,5 @@
 <?php
+    session_start();
 ?>
 
 <div class = "container-fluid d-flex align-items-center justify-content-center welcome" style="height: 800px">

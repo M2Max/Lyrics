@@ -21,9 +21,7 @@ class Song
         $this->date = $date;
         $this->language = $language;
         $this->useradd = $useradd;
-        echo $artist;
         $this->artist[] = $artist;
-        print_r($this->artist);
     }
 
     public function addArtist($artist)
@@ -115,4 +113,11 @@ class Song
     {
         print_r($this->artist);
     }
+
+    public function __toString()
+    {
+        return $this->title . " " . $this->date . " " . $this->language . " " . $this->useradd . " " . $this->printArtist();
+    }
+
+
 }

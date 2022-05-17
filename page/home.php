@@ -1,7 +1,7 @@
 <?php
     session_start();
     if (!isset($_SESSION['username'])) {
-        header("Location: page/login.php");
+        header("Location: login.php");
     }
 ?>
 <!DOCTYPE html>
@@ -25,13 +25,12 @@
                     <div class="mx-auto col-sm-6" >
                         <div class="input-group" >
                             <input id="table_filter" type="text" class="form-control" style = "box-shadow: none" aria-label="Text input with segmented button dropdown" >
-                            <div class="input-group-btn" >
-                                <button id="searchBtn" type="button" class="btn btn-secondary btn-search" style = "box-shadow: none" ><span class="glyphicon glyphicon-search" >&nbsp;</span> <span class="label-icon" >Search</span></button>
-                            </div>
+                            <button id="searchBtn" type="button" class="btn btn-secondary btn-search" style = "background-color: #f8f9fa; box-shadow: none; border: none;" ><img style = "width: 20px; height: 20px;" src="../resources/loupe.png"></button>
                         </div>
                     </div>
                 </div>
             </div>
+            <a href = "#" class = "navbar-brand cormorant" id = "logout">Logout <strong><?php echo $_SESSION["username"]; ?> </strong></a>
         </div>
     </nav>
 </div>

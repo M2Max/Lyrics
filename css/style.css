@@ -1,9 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&display=swap');
 
 
 .water_brush{
     font-family: "Water Brush", cursive;
+    font-size: 36px;
+}
+
+.cormorant{
+    font-family: 'Cormorant Garamond', serif;
     font-size: 28px;
+}
+
+#logout:hover{
+    text-decoration: underline #e3b04b 2px;
+}
+
+#searchBtn:hover{
+    background-color: #e3b04b !important;
+    border-color: #ced4da;
+    color: white;
 }
 
 .welcome::before {
@@ -32,7 +48,6 @@
 
 .welcome {
     position: relative;
-    -webkit-box-reflect: below 1px linear-gradient(transparent, #3333);
 }
 
 .welcome h1 {
@@ -54,7 +69,7 @@
 
     30%,
     60% {
-        width: 394.09px;
+        width: 400px;
     }
 }
 

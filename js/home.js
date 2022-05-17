@@ -21,3 +21,7 @@ $("#searchBtn").on("click", function(){
         });
     }
 });
+
+$("#logout").on("click", function(){
+    window.location = "../php/logout.php";
+});
