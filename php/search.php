@@ -7,7 +7,8 @@
 
     $search = $_POST["search"];
 
-    $sql_query = "SELECT s.Title, s.ReleaseDate, s.Language, p.ArtistName, s.userAdd FROM song s JOIN performance p ON s.Title = p.SongTitle AND s.ReleaseDate = p.SongReleaseDate WHERE s.Title LIKE '%".$search."%' OR s.Text LIKE '%".$search."%' OR p.ArtistName LIKE '".$search."'";
+    $sql_query = "SELECT s.Title, s.ReleaseDate, s.Language, p.ArtistName, s.userAdd FROM song s JOIN performance p ON s.Title = p.SongTitle AND s.ReleaseDate = p.SongReleaseDate WHERE s.Title LIKE '%".$search."%' OR s.Text LIKE '%".$search."%' OR p.SongTitle IN (
+                  SELECT s.Title FROM song s JOIN performance p ON s.Title = p.SongTitle WHERE p.ArtistName LIKE '%".$search."%'  )";
     $result = Connection::doQuery($sql_query);
 
     if (mysqli_num_rows($result) == 0) {
