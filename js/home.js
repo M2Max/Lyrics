@@ -12,7 +12,7 @@ $("#searchBtn").on("click", function(){
             data:{search:search},
             success:function(response){
                 if (response == 0)
-                    alert("Error connecting to the DB");
+                    alert("Nothing to show!");
                 else {
                     $("#content").html(response);
                     console.log(response);

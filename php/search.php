@@ -20,15 +20,22 @@
         if (count($song_array) !== 0) {
             foreach ($song_array as &$value) {
                 if ($value->getTitle() == $song->getTitle() and $value->getDate() == $song->getDate()) {
+                    echo $value->getTitle() . " " . print_r($value->getArtist());
+                    echo "<br>";
+                    echo $song->getTitle() . " " . print_r($value->getArtist());
+                    echo "<br><br>";
                     foreach($value->getArtist() as &$item){
-                        if($item != $row["ArtistName"])
+                        if(!in_array($item, $song->getArtist())) {
+//                            echo $item;
+//                            echo $row["ArtistName"];
                             $value->addArtist($row["ArtistName"]);
+                        }
                     }
                 } else {
                     $song_array[] = $song;
                 }
-                //print_r($song_array);
-                //echo "<br>";
+//                print_r($song_array);
+////                echo "<br>";
             }
         }else {
             $song_array[] = $song;
@@ -39,11 +46,11 @@
     foreach($song_array as &$item){
         $artists = implode(', ', $item->getArtist());
         $string = $string . "
-        <div class='card' style='width: 18rem; display: inline-block;'>
+        <div class='card' style='width: 18rem; display: inline-block; margin-left: 5px;'>
             <div class='card-body'>
                 <h5 class='card-title'>". $item->getTitle() ."</h5>
                 <p class='card-text'>". $artists ."</p>
-                <a href='#' class='btn btn-primary'>Lyrics</a>
+                <a href='#' class='btn btn-primary' style = 'background-color: #e3b04b; border: none;'>Lyrics</a>
             </div>
         </div>";
     }
