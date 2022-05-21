@@ -15,7 +15,6 @@ $("#searchBtn").on("click", function(){
                     alert("Nothing to show!");
                 else {
                     $("#content").html(response);
-                    console.log(response);
                 }
             }
         });

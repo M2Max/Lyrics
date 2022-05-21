@@ -1,15 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,300;1,700&display=swap');
 
 .water_brush{
     font-family: "Water Brush", cursive;
     font-size: 36px;
 }
-
 .cormorant{
     font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
     font-size: 28px;
+}
+
+.btn-song-lyrics{
+    color: black;
+}
+
+.cormorant-regular{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: normal;
+    font-size: 22px;
+}
+
+.cormorant-bold{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 5rem;
+}
+
+#table_filter:focus{
+    border: 1px solid #ced4da;
 }
 
 #logout:hover{
@@ -27,10 +47,10 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 2px;
+    width: 1px;
     height: 100%;
     background: #4FC3F7;
-    animation: cursorBlink 0.8s steps(3) infinite;
+    animation: cursorBlink 0.8s steps(3) 1;
 }
 
 @keyframes cursorBlink {
@@ -53,22 +73,23 @@
 .welcome h1 {
     position: relative;
     color: Black;
+    width: 500px;
     letter-spacing: 5px;
     font-size: 8.5rem;
     overflow: hidden;
     margin-bottom: 0;
-    animation: type 5s steps(11) infinite;
+    animation: type 3s steps(11) 1;
 }
 
 @keyframes type {
 
     0%,
-    100% {
+    50% {
         width: 0px;
     }
 
-    30%,
-    60% {
+    50%,
+    100% {
         width: 500px;
     }
 }
@@ -82,13 +103,13 @@
     @keyframes type {
 
         0%,
-        100% {
-            width: 0px;
+        50% {
+            width: 250px;
         }
 
-        30%,
-        60% {
-            width: 305px;
+        50%,
+        100% {
+            width: 500px;
         }
     }
 }

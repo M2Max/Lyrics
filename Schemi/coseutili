@@ -1,0 +1,4 @@
+
+QUERY UTILISSIMA PER SOSTITUIRE GLI A CAPO CON I <BR>
+
+UPDATE exp_channel_data SET text_column = REPLACE(text_column, '\r\n', '<br />')

@@ -7,6 +7,7 @@ class Song
     private $language;
     private $useradd;
     private $artist = array();
+    private $text;
 
     /**
      * @param $title
@@ -24,9 +25,38 @@ class Song
         $this->artist[] = $artist;
     }
 
+    public static function copyFrom(Song $song)
+    {
+        $newSong = null;
+        foreach($song->getArtist() as &$art){
+            if(is_null($newSong))
+                $newSong = new self($song->getTitle(), $song->getDate(), $song->getLanguage(), $song->getUseradd(), $art);
+            else
+                $newSong->addArtist($art);
+        }
+        return $newSong;
+    }
+
     public function addArtist($artist)
     {
         $this->artist[] = $artist;
+    }
+
+
+    /**
+     * @return mixed
+     */
+    public function getText()
+    {
+        return $this->text;
+    }
+
+    /**
+     * @param mixed $text
+     */
+    public function setText($text)
+    {
+        $this->text = $text;
     }
 
     /**

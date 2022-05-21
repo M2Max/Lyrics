@@ -24,7 +24,7 @@
                 <div class="row searchFilter" >
                     <div class="mx-auto col-sm-6" >
                         <div class="input-group" >
-                            <input id="table_filter" type="text" class="form-control" style = "box-shadow: none" aria-label="Text input with segmented button dropdown" >
+                            <input id="table_filter" type="text" class="form-control" style = "box-shadow: none;" aria-label="Text input with segmented button dropdown" >
                             <button id="searchBtn" type="button" class="btn btn-secondary btn-search" style = "background-color: #f8f9fa; box-shadow: none; border: none;" ><img style = "width: 20px; height: 20px;" src="../resources/loupe.png"></button>
                         </div>
                     </div>
@@ -39,6 +39,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="../js/popper.js"></script>
 <script src="../js/home.js"></script>
+<script src="../js/showSong.js"></script>
 
 </body>
 </html>
