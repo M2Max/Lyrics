@@ -21,7 +21,7 @@
             $_SESSION['username'] = $username;
             echo 1;
         } else {
-            echo 0;
+            echo 2;
         }
 
     }
