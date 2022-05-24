@@ -15,6 +15,11 @@
     margin-top: 30px;
 }
 
+.no-outline:focus{
+    box-shadow: none;
+    border: 1px solid #ced4da;
+}
+
 .btn-song-lyrics{
     color: black;
 }
@@ -30,6 +35,17 @@
     font-weight: bold;
     font-style: italic;
     font-size: 5rem;
+}
+
+#createArtistPage{
+    color: black;
+    text-decoration: underline black;
+    transition: 0.3s;
+}
+
+#createArtistPage:hover{
+    color: #e3b04b;
+    text-decoration: underline #e3b04b;
 }
 
 #add-song:hover > img{
