@@ -23,16 +23,20 @@
         }else
             $songToShow->addArtist($row["ArtistName"]);
     }
-    $artists = implode(', ', $songToShow->getArtist());
     $string = "<div class='d-flex justify-content-center'>
                     <div class = 'flex-md-column'>
-                        <h1 id = 'title' class = 'cormorant-bold'>" . $songToShow->getTitle() ."</h1> 
-                        <br>
-                        <a href='#' class = 'text-decoration-none'><h2 id = 'artists' class = 'cormorant'>" . $artists . "</h2></a>
-                        <br>
-                        <p  id = 'text' class = 'cormorant-regular text-justify'>" . $songToShow->getText() . "</p>
-                    </div>
-                </div>";
+                        <h1 id = 'title' class = 'cormorant-bold'>" . $songToShow->getTitle() ."</h1> <br>";
+
+    for ($i = 0; $i < count($songToShow->getArtist()); $i++){
+        $string = $string . "<a href='#' class = 'text-decoration-none'><h2 id = '" . $songToShow->getArtist()[$i] . "' class = 'cormorant' style = 'display: inline-block;'>" . $songToShow->getArtist()[$i];
+        if ($i == count($songToShow->getArtist()) - 1){
+            $string = $string . "</h2></a>";
+        }else{
+            $string = $string. ", </h2></a>";
+        }
+    }
+
+    $string = $string . "<br><p  id = 'text' class = 'cormorant-regular text-justify'>" . $songToShow->getText() . "</p> </div></div>";
     echo $string;
 
 ?>
