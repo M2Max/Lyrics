@@ -11,6 +11,10 @@
     font-size: 28px;
 }
 
+.margined{
+    margin-top: 30px;
+}
+
 .btn-song-lyrics{
     color: black;
 }
@@ -28,15 +32,51 @@
     font-size: 5rem;
 }
 
+#add-song:hover > img{
+    content: url("../resources/plusY.png");
+}
+
+#add-song-image{
+    content: url("../resources/plusB.png");
+}
+
+#logout-image{
+    content: url("../resources/logoutB.png");
+}
+
+#logout:hover > img{
+    content: url("../resources/logoutY.png");
+}
+
 #table_filter:focus{
     border: 1px solid #ced4da;
 }
 
+#logout{
+    transition: 0.5s;
+}
+
 #logout:hover{
-    text-decoration: underline #e3b04b 2px;
+    text-decoration: #e3b04b underline 2px;
+}
+
+#searchBtn{
+    transition: 0.5s;
 }
 
 #searchBtn:hover{
+    background-color: #e3b04b !important;
+    border-color: #ced4da;
+    color: white;
+}
+
+#addSongBtn{
+    background-color: white !important;
+    border-color: #ced4da;
+    color: black;
+}
+
+#addSongBtn:hover{
     background-color: #e3b04b !important;
     border-color: #ced4da;
     color: white;

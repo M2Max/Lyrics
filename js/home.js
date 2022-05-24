@@ -1,6 +1,7 @@
 $("#content").load("../page/welcome.php");
 
 $("#home").on("click", function(){ $("#content").load("../page/welcome.php"); });
+$("#add-song").on("click", function(){ $("#content").load("../page/addSong.php"); });
 
 $("#searchBtn").on("click", function(){
     let search = $("#table_filter").val().trim();

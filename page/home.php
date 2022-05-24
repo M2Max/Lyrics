@@ -31,7 +31,8 @@
                     </div>
                 </div>
             </div>
-            <a href = "#" class = "navbar-brand cormorant" id = "logout" style = "font-size: 2.2vw;">Logout <strong><?php echo $_SESSION["username"]; ?> </strong></a>
+            <a href = "#" class = "navbar-brand cormorant" id = "add-song" style = "margin-right: 1vw;"><img style = "width: 2vw;" id = "add-song-image"></a>
+            <a href = "#" class = "navbar-brand cormorant" id = "logout" style = "font-size: 2.2vw;"><img style = "width: 2vw;" id = "logout-image"><strong><?php echo $_SESSION["username"]; ?> </strong></a>
         </div>
     </nav>
 </div>
