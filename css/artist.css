@@ -13,31 +13,27 @@ body {
 }
 
 #baf a {
-    color: rgb(255, 255, 255, 0.5)
+    color: rgb(0, 0, 0, 0.5)
 }
 
 #upg {
     border-radius: 25px;
     margin: 1vh;
     background: inherit;
-    color: white;
+    color: black;
     border: 1px solid white
 }
 
 #user {
     font-size: 3vh;
-    color: white;
+    color: black;
     position: relative;
     bottom: 0.5vh
 }
 
-#user:hover {
-    background: inherit
-}
-
 .input-group-addon {
     background-color: black;
-    color: white
+    color: black
 }
 
 .navbar {
@@ -50,10 +46,6 @@ body {
     border-radius: 5vw
 }
 
-#main {
-    background-image: linear-gradient(#006064, #c5e1a5)
-}
-
 #photo {
     padding: 2vw;
     padding-left: 5vw;
@@ -62,19 +54,19 @@ body {
 
 #detail {
     padding: 2vw;
-    color: white;
+    color: black;
     padding-bottom: 2vh
 }
 
 #play {
     background-color: green;
-    color: white;
+    color: black;
     width: 80px;
     border-radius: 25px
 }
 
 #like {
-    color: white;
+    color: black;
     height: 40px;
     width: 40px;
     border-radius: 25px;
@@ -83,7 +75,7 @@ body {
 }
 
 #more {
-    color: white;
+    color: black;
     height: 40px;
     width: 40px;
     border-radius: 25px;
@@ -91,12 +83,8 @@ body {
     border: 1px solid white
 }
 
-#detail h1 {
-    font-size: 7vh
-}
-
 tbody {
-    color: white
+    color: black
 }
 
 thead {
@@ -105,30 +93,18 @@ thead {
 
 .table {}
 
-tbody tr:hover {
-    background-color: green
-}
-
 #dir {
     font-size: 5vh
 }
 
 #dir a {
-    color: white;
+    color: black;
     position: relative;
     bottom: 1vh
 }
 
-#dir a:hover {
-    background: inherit
-}
-
 #dir a:focus {
     background: inherit
-}
-
-#play:hover {
-    background-color: #a5d6a7
 }
 
 @media only screen and (max-width: 425px) {

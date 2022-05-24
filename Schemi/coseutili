@@ -2,3 +2,7 @@
 QUERY UTILISSIMA PER SOSTITUIRE GLI A CAPO CON I <BR>
 
 UPDATE song SET text = REPLACE(text, '\r\n', '<br />')
+
+COMANDO DA FARE IN xampp/mysql/bin PER ESPORTARE DB
+
+./mysqldump -u root -p lyrics > anyDbName.sql

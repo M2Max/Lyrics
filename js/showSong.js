@@ -1,5 +1,3 @@
-let content = $("#content");
-
 content.on("click", ".btn-song-lyrics",function(event) {
     let song = event.target.id.split("?");
     $.ajax({

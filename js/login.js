@@ -15,9 +15,9 @@ $(function(){
                     console.log(response);
                     if(response == 1){
                         window.location = "../page/home.php";
-                    }else{
-                        $('#txt_uname').addClass("is-invalid");
-                        $('#txt_pwd').addClass("is-invalid");
+                    }else if (response == 2){
+                        setInvalidMessage('#txt_uname', "Please insert valid credentials");
+                        setInvalidMessage('#txt_pwd', "Please insert valid credentials");
                     }
                 }
             });
