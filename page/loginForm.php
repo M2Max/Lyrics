@@ -23,7 +23,7 @@
         </div>
     </div>
     <div class="form-group">
-        <button type="submit" class="form-control btn btn-primary rounded submit px-3" id="loginSubmit">Sign In</button>
+        <button type="submit" class="form-control btn btn-primary rounded submit px-3" id="loginSubmit">SIGN IN</button>
     </div>
 </div>
 <p class="text-center">Not a member? <a data-toggle="tab" href="#" id="signup">Sign Up</a></p>

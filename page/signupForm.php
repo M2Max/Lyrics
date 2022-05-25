@@ -3,7 +3,7 @@
 
 <div class="d-flex">
     <div class="w-100">
-        <h3 class="mb-4" id="message">Sign up</h3>
+        <h3 class="mb-4" id="message">Create Account</h3>
     </div>
 </div>
 <div class="signup-form" >
@@ -29,7 +29,7 @@
         </div>
     </div>
     <div class="form-group">
-        <button type="submit" class="form-control btn btn-primary rounded submit px-3" id="signup_submit">Sign In</button>
+        <button type="submit" class="form-control btn btn-primary rounded submit px-3" id="signup_submit">Sign Up</button>
     </div>
 </div>
-<p class="text-center">Not a member? <a data-toggle="tab" href="#" id="login">Login</a></p>
+<p class="text-center">Already a member? <a data-toggle="tab" href="#" id="login">Login</a></p>

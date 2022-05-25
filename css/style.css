@@ -44,8 +44,8 @@
 }
 
 #createArtistPage:hover{
-    color: #e3b04b;
-    text-decoration: underline #e3b04b;
+    color: #ffd633;
+    text-decoration: underline #ffd633;
 }
 
 #add-song:hover > img{
@@ -73,7 +73,7 @@
 }
 
 #logout:hover{
-    text-decoration: #e3b04b underline 2px;
+    text-decoration: #ffd633 underline 2px;
 }
 
 #searchBtn{
@@ -81,21 +81,21 @@
 }
 
 #searchBtn:hover{
-    background-color: #e3b04b !important;
+    background-color: #ffd633 !important;
     border-color: #ced4da;
     color: white;
 }
 
 .yellow-button{
-    background-color: white !important;
-    border-color: #ced4da;
+    background-color: #ffd633 !important;
+    border-color: #ffd633;
     color: black;
 }
 
 .yellow-button:hover{
-    background-color: #e3b04b !important;
-    border-color: #ced4da;
-    color: white;
+    background-color: #ffcc00 !important;
+    border-color: #ffcc00;
+    color: black;
 }
 
 .welcome::before {
