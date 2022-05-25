@@ -29,7 +29,7 @@
                         echo $string;
                         ?>
                     </select>
-                    <a href="#" class = "cormorant-regular text-decoration-none" id = "createArtistPage">Not in the list? Create the artist page!</a>
+                    <a href="#" class = "cormorant-regular yellow-highlight" id = "createArtistPage">Not in the list? Create the artist page!</a>
                 </div>
                 <div class="col-auto margined">
                     <label class="sr-only cormorant-regular" for="songLanguage">Language</label>

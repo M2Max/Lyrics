@@ -37,13 +37,13 @@
     font-size: 4.8rem;
 }
 
-#createArtistPage{
+.yellow-highlight{
     color: black;
     text-decoration: underline black;
     transition: 0.3s;
 }
 
-#createArtistPage:hover{
+.yellow-highlight:hover{
     color: #e3b04b;
     text-decoration: underline #e3b04b;
 }

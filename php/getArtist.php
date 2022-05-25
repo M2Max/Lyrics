@@ -13,8 +13,8 @@
 //        exit;
 //    }
 
-    $row            = mysqli_fetch_assoc($result);
-    $nationality    = $row["Nationality"];
+    $nation            = mysqli_fetch_assoc($result);
+    $nationality    = $nation["Nationality"];
 
     $song_array     = null;
 
@@ -28,12 +28,12 @@
 
     while ($row = mysqli_fetch_assoc($result)) {
         $song = new Song($row["Title"], $row["ReleaseDate"], $row["Language"], $row["userAdd"], $name);
-        $song_array = array();
+        if (is_null($song_array))
+            $song_array = array();
         $song_array[] = $song;
     }
 
-    $string = "<link href='../css/artist.css' rel='stylesheet'>
-                <div class='container' id='main'>
+    $string = "<div class='container' id='main'>
                     <div class='row' id = 'content'>
                         <div class='col-sm-8' id='detail'>
                             <h1 id=". $name ." class = 'cormorant-bold' style = 'font-size: 4rem'><b>". $name ."</b></h1>
@@ -54,7 +54,7 @@
     foreach($song_array as &$item){
         $string = $string . "<tr>
                                 <td>". $count ."</td>
-                                <td><a href = '#' class = 'btn-song-lyrics text-decoration-none' id ='". $item->getTitle() . "?" . $item->getDate() ."'>". $item->getTitle() ."</a></td>
+                                <td><a href = '#' class = 'btn-song-lyrics yellow-highlight' id ='". $item->getTitle() . "?" . $item->getDate() ."'>". $item->getTitle() ."</a></td>
                                 <td>". $item->getLanguage() ."</td> 
                                 <td>". $item->getDate() ."</td>
                                 <td>". $item->getUseradd() ."</td>
