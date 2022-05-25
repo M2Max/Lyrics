@@ -131,7 +131,7 @@
     color: Black;
     width: 500px;
     letter-spacing: 5px;
-    font-size: 8.5rem;
+    font-size: calc(96px + 2vw);
     overflow: hidden;
     margin-bottom: 0;
     animation: type 3s steps(11) 1;
