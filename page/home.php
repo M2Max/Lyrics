@@ -14,6 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link href='../css/artist.css' rel='stylesheet'>
 
 </head>
 <body>
@@ -31,8 +32,8 @@
                     </div>
                 </div>
             </div>
-            <a href = "#" class = "navbar-brand cormorant" id = "add-song" style = "margin-right: 1vw;"><img style = "width: 2vw;" id = "add-song-image"></a>
-            <a href = "#" class = "navbar-brand cormorant" id = "logout" style = "font-size: 2.2vw;"><img style = "width: 2vw;" id = "logout-image"><strong><?php echo $_SESSION["username"]; ?> </strong></a>
+            <a href = "#" class = "navbar-brand cormorant" id = "add-song" style = "margin-right: 1vw;"><img style = "width: calc(18px + 1.5vw);" id = "add-song-image"></a>
+            <a href = "#" class = "navbar-brand cormorant" id = "logout" style = "font-size:calc(30px + 0.3vw);"><img style = "width: calc(18px + 1.5vw);" id = "logout-image"><strong><?php echo $_SESSION["username"]; ?> </strong></a>
         </div>
     </nav>
 </div>

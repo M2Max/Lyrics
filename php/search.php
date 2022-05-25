@@ -40,7 +40,7 @@
     foreach($song_array as &$item){
         $artists = implode(', ', $item->getArtist());
         $string = $string . "
-        <div class='card' style='width: 18rem; display: inline-block; margin-left: 5px;'>
+        <div class='card' style='width: 18rem; display: inline-block; margin-left: 5px;  margin-top: 10px;'>
             <div class='card-body'>
                 <h5 class='card-title'>". $item->getTitle() ."</h5>
                 <p class='card-text'>". $artists ."</p>

@@ -28,11 +28,11 @@
                         <h1 id = 'title' class = 'cormorant-bold'>" . $songToShow->getTitle() ."</h1> <br>";
 
     for ($i = 0; $i < count($songToShow->getArtist()); $i++){
-        $string = $string . "<a href='#' class = 'text-decoration-none artist-page'><h2 class = 'cormorant' style = 'display: inline-block;' id = '" . $songToShow->getArtist()[$i] . "'>" . $songToShow->getArtist()[$i];
+        $string = $string . "<a href='#' class = 'artist-page yellow-highlight'><h2 class = 'cormorant yellow-highlight' style = 'display: inline-block;' id = '" . $songToShow->getArtist()[$i] . "'>" . $songToShow->getArtist()[$i];
         if ($i == count($songToShow->getArtist()) - 1){
             $string = $string . "</h2></a>";
         }else{
-            $string = $string. ", </h2></a>";
+            $string = $string. ",</h2></a> &nbsp; ";
         }
     }
 
