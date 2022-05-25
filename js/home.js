@@ -33,6 +33,21 @@ $("#logout").on("click", function(){
     window.location = "../php/logout.php";
 });
 
+content.on("click", ".artist-page", function(event){
+    let artist = event.target.id.toString();
+    $.ajax({
+        url:'../php/getArtist.php',
+        type:'post',
+        data:{name:artist},
+        success:function(response){
+            if (response == 0)
+                alert("Something went wrong!");
+            else
+                $("#content").html(response);
+        }
+    });
+});
+
 
 content.on('click','#add-song-btn',function(){
     let title = $("#songTitle").val().trim();

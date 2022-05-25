@@ -40,7 +40,11 @@
                     <input type="date" id="dateStandard" name="dateStandard" class = "form-control mb-2 no-outline">
                 </div>
                 <div class="col-auto margined">
-                    <button type="submit" class="btn btn-primary mb-2 no-outline" id = "add-song-btn">Submit</button>
+                    <label class="sr-only cormorant-regular" for="songText">Text</label>
+                    <textarea type="text" class="form-control mb-2 no-outline" id="songText" rows = "8"></textarea>
+                </div>
+                <div class="col-auto margined">
+                    <button type="submit" class="btn btn-primary mb-2 no-outline yellow-button" id = "add-song-btn">Submit</button>
                 </div>
             </div>
         </form>

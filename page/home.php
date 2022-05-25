@@ -36,7 +36,7 @@
         </div>
     </nav>
 </div>
-<div id="content"></div>
+<div id="content" style = "margin-bottom: 50px;"></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="../js/popper.js"></script>
