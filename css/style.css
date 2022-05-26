@@ -131,7 +131,7 @@
     color: Black;
     width: 500px;
     letter-spacing: 5px;
-    font-size: calc(96px + 2vw);
+    font-size: calc(80px + 2vw);
     overflow: hidden;
     margin-bottom: 0;
     animation: type 3s steps(11) 1;
@@ -150,10 +150,10 @@
     }
 }
 
-@media(max-width: 330px) {
-    .welcome h2 {
-        font-size: 3rem;
-        animation: type 5s steps(10) infinite;
+@media(max-width: 1080px) {
+    .welcome h1 {
+        font-size: calc(80px + 5vw);
+        animation: type 3s steps(10) 1;
     }
 
     @keyframes type {
