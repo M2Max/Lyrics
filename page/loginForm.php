@@ -1,7 +1,3 @@
-<?php
-
-?>
-
 <div class="d-flex">
     <div class="w-100">
         <h3 class="mb-4" id="message">Login</h3>
