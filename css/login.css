@@ -7995,18 +7995,19 @@ h1, h2, h3, h4, h5,
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #000;
     font-weight: 700;}
 .btn.btn-primary:hover {
     border: 1px solid #ffcc00;
     background: #ffcc00 !important;
-    color: #ffcc00; }
+    color: black !important;
+}
 .btn.btn-primary:active {
-    border: 1px solid #ffd633;
+    border: none !important;
     background: #ffd633 !important;
-    color: black; }
+    color: black !important;
+}
 .btn.btn-primary.btn-outline-primary {
-    border: 1px solid #ffd633;
+    border: none !important;
     background: transparent;
-    color: #ffd633; }
+     }
 
