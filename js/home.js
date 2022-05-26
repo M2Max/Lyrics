@@ -71,3 +71,7 @@ content.on('click','#add-song-btn',function(){
         });
     }
 });
+
+content.on("click", "#createArtistPage", function(){
+    content.load("../page/addArtist.php");
+});

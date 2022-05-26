@@ -15,7 +15,11 @@
     margin-top: 30px;
 }
 
-.no-outline:focus, .no-outline:active{
+.no-outline:focus {
+    box-shadow: none;
+    border: 1px solid #ced4da;
+}
+.no-outline:active {
     box-shadow: none;
     border: 1px solid #ced4da;
 }
