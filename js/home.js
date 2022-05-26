@@ -24,6 +24,8 @@ $("#searchBtn").on("click", function(){
     }
 });
 
+$("#songArtist").multiselect();
+
 content.on('keyup blur','.alphaonly',function(){
     let node = $(this);
     node.val(node.val().replace(/[^a-z]/g,'') ); }
