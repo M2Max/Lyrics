@@ -26,7 +26,7 @@ $("#searchBtn").on("click", function(){
 
 content.on('keyup blur','.alphaonly',function(){
     let node = $(this);
-    node.val(node.val().replace(/[^a-z]/g,'') ); }
+    node.val(node.val().replace(/[^a-zA-Z]/g,'') ); }
 );
 
 $("#logout").on("click", function(){
@@ -52,7 +52,7 @@ content.on("click", ".artist-page", function(event){
 content.on('click','#add-song-btn',function(){
     let title = $("#songTitle").val().trim();
     let language = $("#songLanguage").val().trim();
-    let artist = $("#songArtist").find(":selected").text();
+    let artist = $("#songArtist").val();
     let relDate =  $( "#dateStandard" ).val();
 
     if (title !== "" && language !== "" && artist !== "" && relDate !== ""){
@@ -62,9 +62,11 @@ content.on('click','#add-song-btn',function(){
             data:{songTitle:title,songLanguage:language,songArtist:artist,relDate:relDate},
             success:function(response){
                 if (response == 0)
-                    alert("error");
-                else{
-                    alert(response);
+                    alert("Error");
+                else if(response == -1){
+                    alert ("Song already exists!");
+                }else{
+                    alert("Loaded successfully");
                     content.load("../page/welcome.php");
                 }
             }
