@@ -4,11 +4,11 @@
         <form>
             <div class="form-row align-items-center">
                 <div class="col-auto margined">
-                    <label class="sr-only cormorant-regular" for="songTitle">Title</label>
-                    <input type="text" class="form-control mb-2 no-outline" id="songTitle">
+                    <label class="sr-only cormorant-regular" for="addSongTitle">Title</label>
+                    <input type="text" class="form-control mb-2 no-outline" id="addSongTitle">
                 </div>
                 <div class="col-auto margined">
-                    <label for="inputState" class = "cormorant-regular">Artist</label>
+                    <label for="songArtist" class = "cormorant-regular">Artist</label>
                     <select class="form-select no-outline cormorant" aria-label="Default select example" multiple id = "songArtist" style = "font-size: 22px;">
                         <?php
                         include "../php/Connection.php";

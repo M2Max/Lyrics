@@ -32,10 +32,11 @@
                     $flag = FALSE;
                 }
             }
-            if ($flag === TRUE)
+            if ($flag === TRUE) {
                 echo 1;
-            else
+            }else {
                 echo 0;
+            }
         }else
             echo 0;
     }

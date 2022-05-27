@@ -50,24 +50,27 @@ content.on("click", ".artist-page", function(event){
 
 
 content.on('click','#add-song-btn',function(){
-    let title = $("#songTitle").val().trim();
+    let title = $("#addSongTitle").val().trim();
     let language = $("#songLanguage").val().trim();
     let artist = $("#songArtist").val();
     let relDate =  $( "#dateStandard" ).val();
+    let text = $("#songText").val().trim();
 
-    if (title !== "" && language !== "" && artist !== "" && relDate !== ""){
+    alert(title);
+
+    if (title !== "" && language !== "" && artist !== "" && relDate !== "" && text !== ""){
         $.ajax({
             url:'../php/loadSong.php',
             type:'post',
-            data:{songTitle:title,songLanguage:language,songArtist:artist,relDate:relDate},
+            data:{songTitle:title,songLanguage:language,songArtist:artist,relDate:relDate, songText:text},
             success:function(response){
-                if (response == 0)
+                if (response == 0) {
                     alert("Error");
-                else if(response == -1){
+                }else if(response == -1){
                     alert ("Song already exists!");
                 }else{
-                    alert("Loaded successfully");
                     content.load("../page/welcome.php");
+                    alert("Loaded successfully");
                 }
             }
         });
