@@ -17,11 +17,13 @@
 
 .no-outline:focus {
     box-shadow: none;
-    border: 1px solid #ced4da;
+    border: none;
+    color: black;
 }
 .no-outline:active {
     box-shadow: none;
-    border: 1px solid #ced4da;
+    border: none;
+    color: black;
 }
 
 .btn-song-lyrics{
@@ -93,13 +95,13 @@
 .yellow-button{
     background-color: #ffd633 !important;
     border-color: #ffd633;
-    color: black;
+    color: black!important;
 }
 
 .yellow-button:hover{
     background-color: #ffcc00 !important;
     border-color: #ffcc00;
-    color: black;
+    color: black!important;
 }
 
 .welcome::before {
@@ -175,3 +177,19 @@
 }
 .form-control {
     padding: 0.3rem 0.6rem;}
+
+.form-control:focus, .form-control:active {
+    outline: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ffd633 !important; }
+
+.form-select:focus, .form-control:active {
+    outline: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ffd633 !important; }
+
+.form-select:focus > option:checked{
+    background: red !important;
+}

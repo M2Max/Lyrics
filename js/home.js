@@ -33,7 +33,7 @@ $("#logout").on("click", function(){
     window.location = "../php/logout.php";
 });
 
-content.on("click", ".artist-page", function(event){
+/*content.on("click", ".artist-page", function(event){
     let artist = event.target.id.toString();
     $.ajax({
         url:'../php/getArtist.php',
@@ -46,7 +46,7 @@ content.on("click", ".artist-page", function(event){
                 $("#content").html(response);
         }
     });
-});
+});*/
 
 
 content.on('click','#add-song-btn',function(){
@@ -70,7 +70,7 @@ content.on('click','#add-song-btn',function(){
                     alert ("Song already exists!");
                 }else{
                     content.load("../page/welcome.php");
-                    alert("Loaded successfully");
+                    alert("Song loaded successfully");
                 }
             }
         });
@@ -79,4 +79,28 @@ content.on('click','#add-song-btn',function(){
 
 content.on("click", "#createArtistPage", function(){
     content.load("../page/addArtist.php");
+});
+
+content.on('click','#add-artist-btn',function(){
+    let artist = $("#artistName").val().trim();
+    let nationality = $("#artistNationality").val().trim();
+
+    if (artist !== "" && nationality !== ""){
+        $.ajax({
+            url:'../php/loadArtist.php',
+            type:'post',
+            data:{artistName:artist,artistNationality:nationality},
+            success:function(response){
+                if (response == 0) {
+                    alert("Error");
+                }else if(response == -1){
+                    alert ("Artist already exists!");
+                }else{
+                    content.load("../page/welcome.php");
+                    alert("New artist loaded successfully");
+                }
+            }
+        });
+    }
+
 });
