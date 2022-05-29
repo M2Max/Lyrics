@@ -5,7 +5,7 @@
             <div class="form-row align-items-center">
                 <div class="col-auto margined">
                     <label class="sr-only cormorant-regular" for="addSongTitle">Title</label>
-                    <input type="text" class="form-control mb-2 no-outline" id="addSongTitle">
+                    <input type="text" class="form-control mb-2 no-outline cormorant" id="addSongTitle" style = 'font-size: 18px;'>
                 </div>
                 <div class="col-auto margined">
                     <label for="songArtist" class = "cormorant-regular">Artist</label>
@@ -33,7 +33,7 @@
                 </div>
                 <div class="col-auto margined">
                     <label class="sr-only cormorant-regular" for="songLanguage">Language</label>
-                    <input type="text" class="form-control mb-2 alphaonly no-outline" id="songLanguage">
+                    <input type="text" class="form-control mb-2 alphaonly no-outline cormorant" id="songLanguage" style = 'font-size: 18px;'>
                 </div>
                 <div class="col-auto margined">
                     <label class="active sr-only cormorant-regular" for="dateStandard">Release Date</label>
