@@ -24,7 +24,7 @@
                         $string = "";
 
                         while ($row = mysqli_fetch_assoc($result)) {
-                            $string = $string . "<option value = ". $row["Name"] ." class = 'cormorant' style = 'font-size: 18px;' >". $row["Name"] ."</option>";
+                            $string = $string . '<option value = "'. $row['Name'] .'" class = "cormorant" style = "font-size: 18px;" >'. $row['Name'] .'</option>';
                         }
                         echo $string;
                         ?>
@@ -36,8 +36,8 @@
                     <input type="text" class="form-control mb-2 alphaonly no-outline cormorant" id="songLanguage" style = 'font-size: 18px;'>
                 </div>
                 <div class="col-auto margined">
-                    <label class="active sr-only cormorant-regular" for="dateStandard">Release Date</label>
-                    <input type="date" id="dateStandard" name="dateStandard" class = "form-control mb-2 no-outline cormorant" style = 'font-size: 18px;'>
+                    <label class="active sr-only cormorant-regular" for="songDate">Release Date</label>
+                    <input type="date" id="songDate" class = "form-control mb-2 no-outline cormorant" style = 'font-size: 18px;'>
                 </div>
                 <div class="col-auto margined">
                     <label class="sr-only cormorant-regular" for="songText">Text</label>

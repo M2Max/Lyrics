@@ -53,16 +53,16 @@ content.on('click','#add-song-btn',function(){
     let title = $("#addSongTitle").val().trim();
     let language = $("#songLanguage").val().trim();
     let artist = $("#songArtist").val();
-    let relDate =  $( "#dateStandard" ).val();
+    let relDate =  $( "#songDate" ).val();
     let text = $("#songText").val().trim();
 
-    alert(title);
+    console.log(artist);
 
     if (title !== "" && language !== "" && artist !== "" && relDate !== "" && text !== ""){
         $.ajax({
             url:'../php/loadSong.php',
             type:'post',
-            data:{songTitle:title,songLanguage:language,songArtist:artist,relDate:relDate, songText:text},
+            data:{songTitle:title,songLanguage:language,songArtist:artist,songDate:relDate, songText:text},
             success:function(response){
                 if (response == 0) {
                     alert("Error");
