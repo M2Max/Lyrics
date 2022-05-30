@@ -33,7 +33,7 @@ $("#logout").on("click", function(){
     window.location = "../php/logout.php";
 });
 
-/*content.on("click", ".artist-page", function(event){
+content.on("click", ".artist-page", function(event){
     let artist = event.target.id.toString();
     $.ajax({
         url:'../php/getArtist.php',
@@ -46,7 +46,7 @@ $("#logout").on("click", function(){
                 $("#content").html(response);
         }
     });
-});*/
+});
 
 
 content.on('click','#add-song-btn',function(){
