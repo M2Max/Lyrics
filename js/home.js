@@ -56,9 +56,24 @@ content.on('click','#add-song-btn',function(){
     let relDate =  $( "#songDate" ).val();
     let text = $("#songText").val().trim();
 
-    console.log(artist);
+    $("#addSongTitle").removeClass("is-invalid");
+    $("#songArtist").removeClass("is-invalid");
+    $("#songText").removeClass("is-invalid");
+    $("#songDate").removeClass("is-invalid");
+    $("#songLanguage").removeClass("is-invalid");
 
-    if (title !== "" && language !== "" && artist !== "" && relDate !== "" && text !== ""){
+
+    if(title === "")
+        $("#addSongTitle").addClass("is-invalid");
+    if(language === "")
+        $("#songLanguage").addClass("is-invalid");
+    if(relDate === "")
+        $("#songDate").addClass("is-invalid");
+    if(artist.length === 0)
+        $("#songArtist").addClass("is-invalid");
+    if(text === "")
+        $("#songText").addClass("is-invalid");
+    else if (title !== "" && language !== "" && relDate !== "" && text !== "" && artist !== ""){
         $.ajax({
             url:'../php/loadSong.php',
             type:'post',
@@ -69,6 +84,7 @@ content.on('click','#add-song-btn',function(){
                 }else if(response == -1){
                     alert ("Song already exists!");
                 }else{
+                    console.log(response);
                     content.load("../page/welcome.php");
                     alert("Song loaded successfully");
                 }
