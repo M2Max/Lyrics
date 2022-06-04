@@ -33,7 +33,7 @@
                 </div>
             </div>
             <a href = "#" class = "navbar-brand cormorant" id = "add-song" style = "margin-right: 1vw;"><img style = "width: calc(18px + 1.5vw);" id = "add-song-image"></a>
-            <a href = "#" class = "navbar-brand cormorant" id = "logout" style = "font-size:calc(30px + 0.3vw);"><img style = "width: calc(18px + 1.5vw);" id = "logout-image"><strong><?php echo $_SESSION["username"]; ?> </strong></a>
+            <a href = "#" class = "navbar-brand cormorant" id = "logout" style = "font-size:calc(30px + 0.3vw);"><img style = "width: calc(18px + 1.5vw);" id = "logout-image"><?php echo " ".$_SESSION["username"]; ?></a>
         </div>
     </nav>
 </div>

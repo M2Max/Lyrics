@@ -6,9 +6,8 @@
     font-size: 36px;
 }
 .cormorant{
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 28px;
+    font-family: Programme, Arial, sans-serif;
+    font-size: 1.30rem !important;
 }
 
 .margined{
@@ -25,61 +24,60 @@
     border: none;
     color: black;
 }
+.no-outline:active:focus {
+    box-shadow: none;
+    border: none;
+    color: black;
+}
 
 .btn-song-lyrics{
     color: black;
 }
 
 .cormorant-regular{
-    font-family: 'Cormorant Garamond', serif;
+    font-family: Programme, Arial, sans-serif;
     font-weight: normal;
-    font-size: 22px;
+    font-size: 0.95rem;
 }
 
 .cormorant-bold{
-    font-family: 'Cormorant Garamond', serif;
+    font-family: Programme, Arial, sans-serif;
     font-weight: bold;
-    font-style: italic;
-    font-size: 4.8rem;
+    font-size: 3.6rem !important;
+    text-size-adjust: 100% !important;
 }
 
 .yellow-highlight{
     color: black;
-    text-decoration: underline black;
-    transition: 0.3s;
+    text-decoration: none !important;
 }
 
 .yellow-highlight:hover{
     color: #ffd633;
-    text-decoration: underline #ffd633;
 }
 
 #add-song:hover > img{
-    content: url("../resources/plusY.png");
+    content: url("../resources/add_song_yellow.png");
 }
 
 #add-song-image{
-    content: url("../resources/plusB.png");
+    content: url("../resources/add_song_black.png");
 }
 
 #logout-image{
-    content: url("../resources/logoutB.png");
+    content: url("../resources/logout.png");
 }
 
 #logout:hover > img{
-    content: url("../resources/logoutY.png");
+    content: url("../resources/logout_yellow.png");
 }
 
 #table_filter:focus{
     border: 1px solid #ced4da;
 }
 
-#logout{
-    transition: 0.5s;
-}
-
 #logout:hover{
-    text-decoration: #ffd633 underline 2px;
+    color: #ffd633;
 }
 
 #searchBtn{
@@ -88,8 +86,6 @@
 
 #searchBtn:hover{
     background-color: #ffd633 !important;
-    border-color: #ced4da;
-    color: white;
 }
 
 .yellow-button{
@@ -99,9 +95,17 @@
 }
 
 .yellow-button:hover{
-    background-color: #ffcc00 !important;
-    border-color: #ffcc00;
-    color: black!important;
+    border: #ffcc00 !important;
+    background: #ffcc00 !important;
+    color: black !important;
+    -o-transition: .3s all ease;
+}
+
+.yellow-button:active{
+    border: #ffd633 !important;
+    background: #ffd633 !important;
+    color: black !important;
+    -o-transition: .3s all ease;
 }
 
 .welcome::before {

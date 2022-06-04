@@ -36,30 +36,26 @@
     $string = "<div class='container' id='main'>
                     <div class='row' id = 'content'>
                         <div class='col-sm-8' id='detail'>
-                            <h1 id=". $name ." class = 'cormorant-bold' style = 'font-size: 4rem'><b>". $name ."</b></h1>
+                            <h1 id=". $name ." class = 'cormorant-bold' style = 'font-size: 4rem'>". $name ."</h1>
                         </div>
                     </div>
                     <table class='table cormorant-regular'>
                     <thead>
                     <tr>
-                        <td>#</td>
-                        <td>Title</td>
+                        <td>Song Title</td>
                         <td>Language</td>
-                        <td><i class='fa fa-clock-o'></i></td>
+                        <td>Release Date</td>
                         <td>User</td>                   
                     </tr>
                     </thead>
                     <tbody>";
-    $count = 1;
     foreach($song_array as &$item){
         $string = $string . "<tr>
-                                <td>". $count ."</td>
                                 <td><a href = '#' class = 'btn-song-lyrics yellow-highlight' id ='". $item->getTitle() . "?" . $item->getDate() ."'>". $item->getTitle() ."</a></td>
                                 <td>". $item->getLanguage() ."</td> 
                                 <td>". $item->getDate() ."</td>
                                 <td>". $item->getUseradd() ."</td>
                             </tr>";
-        $count++;
     }
 
 
