@@ -51,7 +51,7 @@
                     <tbody>";
     foreach($song_array as &$item){
         $string = $string . "<tr>
-                                <td><a href = '#' class = 'btn-song-lyrics yellow-highlight' id ='". $item->getTitle() . "?" . $item->getDate() ."'>". $item->getTitle() ."</a></td>
+                                <td><a href = '#' class = 'song-lyrics yellow-highlight' id ='". $item->getTitle() . "?" . $item->getDate() ."'>". $item->getTitle() ."</a></td>
                                 <td>". $item->getLanguage() ."</td> 
                                 <td>". $item->getDate() ."</td>
                                 <td>". $item->getUseradd() ."</td>

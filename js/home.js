@@ -7,15 +7,17 @@ $("#add-song").on("click", function(){ $("#content").load("../page/addSong.php")
 
 $("#searchBtn").on("click", function(){
     let search = $("#table_filter").val().trim();
-
+    $("#table_filter").val("");
+    $("#table_filter").attr("placeholder","Search lyrics & more");
     if ( search != "" ){
         $.ajax({
             url:'../php/search.php',
             type:'post',
             data:{search:search},
             success:function(response){
-                if (response == 0)
-                    alert("Nothing to show!");
+                if (response == 0){
+                    $("#content").html("<div class= 'cormorant-regular' style='font-size: 16px; text-align: center; letter-spacing: 0.08em;'>NO RESULTS FOUND FOR <i>&quot;" + search +"&quot;</i></div>");
+                }
                 else {
                     $("#content").html(response);
                 }
@@ -47,7 +49,6 @@ content.on("click", ".artist-page", function(event){
         }
     });
 });
-
 
 content.on('click','#add-song-btn',function(){
     let title = $("#addSongTitle").val().trim();

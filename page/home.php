@@ -26,14 +26,15 @@
                 <div class="row searchFilter" >
                     <div class="mx-auto col-sm-6" >
                         <div class="input-group" >
-                            <input id="table_filter" type="text" class="form-control" style = "box-shadow: none;" aria-label="Text input with segmented button dropdown" placeholder = "Search through authors, song titles and texts" >
-                            <button id="searchBtn" type="button" class="btn btn-secondary btn-search" style = "background-color: #f8f9fa; box-shadow: none; border: none;" ><img style = "width: 20px; height: 20px;" src="../resources/loupe.png"></button>
+                            <input id="table_filter" type="text" class="form-control" style = "box-shadow: none;" aria-label="Text input with segmented button dropdown" placeholder = "Search lyrics & more" >
+                            <button id="searchBtn" type="button" class="btn btn-secondary btn-search"><img style = "width: 20px; height: 20px;" src="../resources/search.png"></button>
                         </div>
                     </div>
                 </div>
             </div>
-            <a href = "#" class = "navbar-brand cormorant" id = "add-song" style = "margin-right: 1vw;"><img style = "width: calc(18px + 1.5vw);" id = "add-song-image"></a>
-            <a href = "#" class = "navbar-brand cormorant" id = "logout" style = "font-size:calc(30px + 0.3vw);"><img style = "width: calc(18px + 1.5vw);" id = "logout-image"><?php echo " ".$_SESSION["username"]; ?></a>
+            <a href = "#" class = "navbar-brand cormorant" id = "add-song" style = "margin-right: 1vw;"><img style = "width: calc(9px + 1.5vw);" id = "add-song-image"></a>
+            <!--<a href = "#" class = "navbar-brand cormorant" id = "logout" style = "font-size:calc(30px + 0.3vw);"><img style = "width: calc(6px + 1.5vw);" id = "logout-image"><?php echo " ".$_SESSION["username"]; ?></a>-->
+            <a href = "#" class = "navbar-brand cormorant" id = "logout" style = "font-size:calc(30px + 0.3vw);"><img style = "width: calc(6px + 1.5vw);" id = "logout-image"></a>
         </div>
     </nav>
 </div>

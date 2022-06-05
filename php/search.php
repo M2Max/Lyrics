@@ -37,8 +37,9 @@
 
     }
 
-    $string = "<div class = 'card-columns'>";
-    foreach($song_array as &$item){
+    $string = "<div class = 'card-columns'> <h2 style='text-align: center; font-weight: 700;'>&quot$search&quot</h2> 
+                <div style='font-size: 14px; text-align: center; letter-spacing: .1rem;'>ALL RESULTS</div>";
+    /*foreach($song_array as &$item){
         $artists = implode(', ', $item->getArtist());
         $string = $string . "
         <div class='card' id ='". $item->getTitle() . "?" . $item->getDate() ."' style='width: 18rem; display: inline-block; margin-left: 5px;  margin-top: 10px;'>
@@ -48,6 +49,16 @@
                 <button type='submit' class='btn btn-primary btn-song-lyrics yellow-button no-outline' id ='". $item->getTitle() . "?" . $item->getDate() ."' style = 'background-color: #e3b04b; border: none;'>Lyrics</input>
             </div>
         </div>";
+    }*/
+    foreach($song_array as &$item){
+        $artists = implode(', ', $item->getArtist());
+        $string = $string . "
+            <div class='card song-lyrics' id ='". $item->getTitle() . "?" . $item->getDate() ."' style='width: 18rem; display: inline-block; margin-left: 5px;  margin-top: 10px;'>
+                <div class='card-body'>
+                    <h5 class='card-title'>". $item->getTitle() ."</h5>
+                    <p class='card-text'>". $artists ."</p>
+                </div>
+            </div>";
     }
     $string = $string . "</div>";
 

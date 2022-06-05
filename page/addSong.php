@@ -1,6 +1,6 @@
 <div class='d-flex justify-content-center'>
     <div class = 'flex-md-column text-center' style = "min-width: 25vw;">
-        <h1 id = 'title' class = 'cormorant-bold'>New song</h1>
+        <h3 id = 'title' class = 'cormorant-bold'>New song</h3>
         <form>
             <div class="form-row align-items-center">
                 <div class="col-auto margined">
@@ -35,9 +35,8 @@
                     <div class="invalid-feedback" id="invalid-artist_add_song">
                         Required field
                     </div>
-                    <div style="float:left;" class="cormorant-regular">Not in the list?&nbsp;</div>
+                    <div style="float:left; padding-left: 45px;" class="cormorant-regular">Not in the list?&nbsp;</div>
                     <div style="float:left;"><a href="#" class = "cormorant-regular yellow-highlight" id = "createArtistPage">Create the artist page!</a></div>
-                    </div>
                 <div class="col-auto margined">
                     <label class="sr-only cormorant-regular" for="songLanguage">Language</label>
                     <input type="text" class="form-control mb-2 alphaonly cormorant-regular" id="songLanguage">
@@ -60,7 +59,7 @@
                     </div>
                 </div>
                 <div class="col-auto margined">
-                    <button type="submit" class="btn btn-primary mb-2 no-outline yellow-button" id = "add-song-btn">Submit</button>
+                    <button type="submit" class="btn btn-primary yellow-button" id = "add-song-btn">Submit</button>
                 </div>
             </div>
         </form>
