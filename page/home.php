@@ -19,7 +19,7 @@
 </head>
 <body>
 <div class="m-4">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style = "border-radius: 7px">
         <div class="container-fluid">
             <a href="#" id="home" class="navbar-brand water_brush">Lyrics</a>
             <div class="container" style = "max-width: 60vw">

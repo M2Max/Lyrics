@@ -14,6 +14,10 @@
     margin-top: 30px;
 }
 
+#home {
+    margin-left: 5px;
+}
+
 .no-outline:focus {
     box-shadow: none;
     border: none;
@@ -76,7 +80,7 @@
 
 #table_filter{
     border: none !important;
-    border-radius: 0px !important;
+    border-radius: 7px !important;
 }
 #table_filter:active{
     border: none !important;
@@ -85,6 +89,7 @@
 .input-group{
     background-color: white;
     border: 1px solid black;
+    border-radius: 7px;
 }
 #searchBtn{
     background-color: transparent;
