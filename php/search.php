@@ -9,7 +9,8 @@
 
     $search = str_replace("'", "`", $search);
     $sql_query = "SELECT s.Title, s.ReleaseDate, s.Language, p.ArtistName, s.userAdd FROM song s JOIN performance p ON s.Title = p.SongTitle AND s.ReleaseDate = p.SongReleaseDate WHERE s.Title LIKE '%".$search."%' OR s.Text LIKE '%".$search."%' OR p.SongTitle IN (
-                  SELECT s.Title FROM song s JOIN performance p ON s.Title = p.SongTitle WHERE p.ArtistName LIKE '%".$search."%'  )
+                    SELECT s.Title FROM song s JOIN performance p ON s.Title = p.SongTitle WHERE p.ArtistName LIKE '%".$search."%'  ) 
+                  OR YEAR(s.ReleaseDate) = '$search'
                   GROUP BY  s.Title, s.ReleaseDate, s.Language, p.ArtistName, s.userAdd";
     $result = Connection::doQuery($sql_query);
 
