@@ -35,8 +35,7 @@
                     <div class="invalid-feedback" id="invalid-artist_add_song">
                         Required field
                     </div>
-                    <div style="float:left; padding-left: 45px;" class="cormorant-regular">Not in the list?&nbsp;</div>
-                    <div style="float:left;"><a href="#" class = "cormorant-regular yellow-highlight" id = "createArtistPage">Create the artist page!</a></div>
+                    <div style="float:left; padding-left: 45px;" class="cormorant-regular">Not in the list?&nbsp;<a href="#" class = "cormorant-regular yellow-highlight" id = "createArtistPage">Create the artist page!</a></div>
                 <div class="col-auto margined">
                     <label class="sr-only cormorant-regular" for="songLanguage">Language</label>
                     <input type="text" class="form-control mb-2 alphaonly cormorant-regular" id="songLanguage">
