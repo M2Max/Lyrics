@@ -4,18 +4,6 @@
     include "Song.php";
 
     $name           = $_POST["name"];
-//
-//    $sql_query = "SELECT a.Nationality FROM artist a WHERE a.Name LIKE '". $name ."'";
-//    $result = Connection::doQuery($sql_query);
-//
-//    if (mysqli_num_rows($result) == 0) {
-//        echo 0;
-//        exit;
-//    }
-//
-//    $nation            = mysqli_fetch_assoc($result);
-//    $nationality    = $nation["Nationality"];
-
     $song_array     = null;
 
     $sql_query      = "SELECT s.Title, s.Language, s.ReleaseDate, s.userAdd FROM song s JOIN performance p on s.ReleaseDate = p.SongReleaseDate and s.Title = p.SongTitle WHERE p.ArtistName LIKE '" . $name . "'";

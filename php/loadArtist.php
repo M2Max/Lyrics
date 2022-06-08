@@ -6,6 +6,7 @@
     $name = $_POST["artistName"];
     $nationality = $_POST["artistNationality"];
 
+    $name = str_replace("'", "`", $name);
     $sql_query = "select count(*) as cntArtist from artist a where a.Name = '". $name ."'";
     $result = Connection::doQuery($sql_query);
     $row = mysqli_fetch_array($result);
