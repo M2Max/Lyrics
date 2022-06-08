@@ -11,8 +11,8 @@ searchInput.on("keypress", function(event) {
     }
 });
 
-$("#home").on("click", function(){ $("#content").load("../page/welcome.php"); });
-$("#add-song").on("click", function(){ $("#content").load("../page/addSong.php"); });
+$("#home").on("click", function(){ content.load("../page/welcome.php"); });
+$("#add-song").on("click", function(){ content.load("../page/addSong.php"); });
 
 searchBtn.on("click", function(){
     let search = searchInput.val().trim();
@@ -25,10 +25,10 @@ searchBtn.on("click", function(){
             data:{search:search},
             success:function(response){
                 if (response == 0){
-                    $("#content").html("<div class= 'cormorant-regular' style='font-size: 16px; text-align: center; letter-spacing: 0.08em;'>NO RESULTS FOUND FOR <i>&quot;" + search +"&quot;</i></div>");
+                    content.html("<div class= 'cormorant-regular' style='font-size: 16px; text-align: center; letter-spacing: 0.08em;'>NO RESULTS FOUND FOR <i>&quot;" + search +"&quot;</i></div>");
                 }
                 else {
-                    $("#content").html(response);
+                    content.html(response);
                 }
             }
         });
@@ -54,7 +54,7 @@ content.on("click", ".artist-page", function(event){
             if (response == 0)
                 alert("Something went wrong!");
             else
-                $("#content").html(response);
+                content.html(response);
         }
     });
 });
@@ -94,7 +94,6 @@ content.on('click','#add-song-btn',function(){
                 }else if(response == -1){
                     alert ("Song already exists!");
                 }else{
-                    console.log(response);
                     content.load("../page/welcome.php");
                     alert("Song loaded successfully");
                 }
@@ -129,4 +128,20 @@ content.on('click','#add-artist-btn',function(){
         });
     }
 
+});
+
+content.on("click", ".song-lyrics", function (event) {
+    let song = $(this).attr("id").split("?");
+    $.ajax({
+        url: '../php/getSong.php',
+        type: 'post',
+        data: {title: song[0], date: song[1]},
+        success: function (response) {
+            if (response == 0)
+                alert("Something went wrong!");
+            else {
+                content.html(response);
+            }
+        }
+    });
 });
