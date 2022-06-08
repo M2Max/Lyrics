@@ -26,7 +26,7 @@
                 <div class="row searchFilter" >
                     <div class="mx-auto col-sm-6" >
                         <div class="input-group" >
-                            <input id="table_filter" type="text" class="form-control" style = "box-shadow: none;" aria-label="Text input with segmented button dropdown" placeholder = "Search lyrics & more" >
+                            <input id="searchInput" type="text" class="form-control" style = "box-shadow: none;" aria-label="Text input with segmented button dropdown" placeholder = "Search lyrics & more" >
                             <button id="searchBtn" type="button" class="btn btn-secondary btn-search"><img style = "width: 20px; height: 20px;" src="../resources/search.png"></button>
                         </div>
                     </div>

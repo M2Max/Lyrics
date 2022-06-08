@@ -1,14 +1,23 @@
 let content = $("#content");
+let searchBtn = $('#searchBtn');
+let searchInput = $('#searchInput');
 
 content.load("../page/welcome.php");
+
+searchInput.on("keypress", function(event) {
+    let key = event.key || event.keyCode;
+    if (key === 'Enter' || key === 13) {
+        searchBtn.trigger("click");
+    }
+});
 
 $("#home").on("click", function(){ $("#content").load("../page/welcome.php"); });
 $("#add-song").on("click", function(){ $("#content").load("../page/addSong.php"); });
 
-$("#searchBtn").on("click", function(){
-    let search = $("#table_filter").val().trim();
-    $("#table_filter").val("");
-    $("#table_filter").attr("placeholder","Search lyrics & more");
+searchBtn.on("click", function(){
+    let search = searchInput.val().trim();
+    searchInput.val("");
+    searchInput.attr("placeholder","Search lyrics & more");
     if ( search != "" ){
         $.ajax({
             url:'../php/search.php',
