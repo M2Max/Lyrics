@@ -37,7 +37,7 @@ searchBtn.on("click", function(){
 
 content.on('keyup blur','.alphaonly',function(){
     let node = $(this);
-    node.val(node.val().replace(/[^a-zA-Z]/g,'') ); }
+    node.val(node.val().replace(/[^a-zA-Z" "]/g,'') ); }
 );
 
 $("#logout").on("click", function(){
